@@ -3,10 +3,9 @@ import useFetch from "./useFetch";
 
 const Home = () => {
 
-    const { data:recipes, isLoading, error} = useFetch('http://localhost:3001/recipes')
+    const { data:recipes, isLoading } = useFetch('http://localhost:3001/recipes')
     return (
         <div className="home">
-            { error && <div>{error}</div> }
             {isLoading && <div className="loading">Loading...</div>}
             {recipes && <RecipeList  recipes={recipes} name ="All Recipes"  />}
         </div>
