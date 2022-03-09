@@ -3,7 +3,7 @@
 /* base styles */
 * {
   margin: 0;
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: FuturaPT, helvetica, sans-serif;;
   color: #000;
 }
 body {
@@ -55,4 +55,29 @@ body {
 }
 .recipe-preview a{
   text-decoration: none;
+}
+
+/* recipe info */
+.recipe-info h2 {
+  font-size: 30px;
+  color: #cd5c5c;
+  margin-bottom: 10px;
+}
+.recipe-info div {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.recipe-info p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+}
+.recipe-info button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
