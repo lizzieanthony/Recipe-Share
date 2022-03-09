@@ -1,20 +1,19 @@
+import { useState, useEffect } from "react";
+import RecipeList from "./RecipeList";
+import useFetch from "./useFetch";
+
 const Home = () => {
 
-let name = 'Lizzie'
-
-const handleClick = () => {
-    name = 'louie';
-    console.log(name)
-}
- 
+    const { data:recipes, isLoading, error} = useFetch('http://localhost:3001/recipes')
     return (
         <div className="home">
-            <h2>HomePage</h2>
-            <p>{name}</p>
-            <button onClick={handleClick}>Click Me!</button>
-            
+            { error && <div>{error}</div> }
+            {isLoading && <div className="loading">Loading...</div>}
+            {recipes && <RecipeList  recipes={recipes} name ="All Recipes"  />}
         </div>
       );
 }
  
 export default Home;
+
+{/* <RecipeList  recipes={recipes.filter((recipe) => recipe.author === 'lizzie')} title ="Lizzies' Recipes"/> */}
