@@ -12,9 +12,11 @@ const RecipeInfo = () => {
                 <article>
                     <h2>{ recipe.name }</h2>
                     <h4>Sourced from: {recipe.source }</h4>
+                    <br></br>
                     <p>{ recipe.servings } servings</p>
                     <br></br>
-                    <ul>{ recipe.ingredients.map((ingredient) => <li>{ingredient}</li> ) }</ul>
+                    <ul>{ recipe.ingredients.map((ingredient) => <ul>{ingredient}</ul> ) }</ul>
+                    <br></br>
                     <div>{ recipe.instructions }</div>
                 </article>
             )}
