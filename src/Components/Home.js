@@ -4,6 +4,7 @@ import useFetch from "./useFetch";
 const Home = () => {
 
     const { data:recipes, isLoading } = useFetch('http://localhost:3001/recipes')
+    
     return (
         <div className="home">
             {isLoading && <div className="loading">Loading...</div>}

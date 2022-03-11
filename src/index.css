@@ -6,6 +6,7 @@
   font-family: FuturaPT, helvetica, sans-serif;;
   color: #000;
 }
+
 body {
   background-color: #fff;
 }
@@ -18,22 +19,29 @@ body {
   border-bottom: 1px solid #f6b26b;
   background-color: #f6b26b;
 }
+
 .navbar h1 {
   color: #bf6609;
   align-items: center;
 }
+
 .navbar .links {
   margin-left: auto;
 }
+
 .navbar a {
-  margin-left: 20px;
+  margin-left: 50px;
   text-decoration: none;
   padding: 6px;
+  border-radius: 10px;
+  color: #bf6609;
 }
+
 .navbar a:hover {
   color: #cd5c5c;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
 }
+
 .content {
   max-width: 800px;
   margin: 40px auto;
@@ -90,3 +98,34 @@ body {
   text-indent: -5%;
 }
 
+.NewRecipe {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.NewRecipe label {
+  text-align: left;
+  display: block;
+}
+.NewRecipe h2 {
+  font-size: 24px;
+  color: #bf6609;
+  margin-bottom: 30px;
+}
+.NewRecipe input, .NewRecipe textarea, .NewRecipe select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.NewRecipe button {
+  background: #cd5c5c;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
