@@ -7,11 +7,12 @@ const NewRecipe = () => {
     const [name, setName] = useState('')
     const [author, setAuthor] = useState('')
     const [servings, setServings] = useState('')
-    const [ingredients, setIngredients] = useState('')
+    const [ingredients, setIngredients] = useState([])
     const [instructions, setInstructions] = useState('')
     const [recipeAdded, setRecipeAdded] = useState(false)
     const history = useHistory();
-    
+
+    // const ingredientsArray = (ingredients) => ingredients.split(',');
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -62,7 +63,7 @@ const NewRecipe = () => {
                 </select>  
                 <label>Ingredients:</label>
                 <p>separate using commas. ex: 1 tsp salt, 1 c flour</p>
-                <textarea 
+                <textarea
                 required
                 value={ingredients}
                 onChange={(e) => setIngredients(e.target.value)}
