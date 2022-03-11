@@ -26,3 +26,4 @@ const RecipeInfo = () => {
  
 export default RecipeInfo;
 
+{/* <ul>{ recipe.ingredients.map((ingredient) => <ul key={recipe.id}>{ingredient}</ul> ) }</ul> */}

@@ -115,6 +115,12 @@ body {
   color: #bf6609;
   margin-bottom: 30px;
 }
+.NewRecipe p {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 4px;
+  color: #f6b26b;
+}
 .NewRecipe input, .NewRecipe textarea, .NewRecipe select {
   width: 100%;
   padding: 6px 10px;

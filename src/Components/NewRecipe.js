@@ -28,9 +28,7 @@ const NewRecipe = () => {
                 setRecipeAdded('false')
                 history.push('/')
             })
-        }, 1000);
-        
-        
+        }, 1000); 
     }
 
     return ( 
@@ -63,6 +61,7 @@ const NewRecipe = () => {
                     <option value="10">10 servings</option>
                 </select>  
                 <label>Ingredients:</label>
+                <p>separate using commas. ex: 1 tsp salt, 1 c flour</p>
                 <textarea 
                 required
                 value={ingredients}
