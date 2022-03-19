@@ -11,7 +11,7 @@ const RecipeInfo = () => {
             { recipe && (
                 <article>
                     <h2>{ recipe.name }</h2>
-                    <h4>Sourced from: {recipe.source }</h4>
+                    <h4>Recipe by: {recipe.source }</h4>
                     <br></br>
                     <p>{ recipe.servings } servings</p>
                     <br></br>

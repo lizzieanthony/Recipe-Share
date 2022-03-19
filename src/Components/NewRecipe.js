@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const NewRecipe = () => {
 
     const [name, setName] = useState('')
-    const [author, setAuthor] = useState('')
+    const [source, setSource] = useState('')
     const [servings, setServings] = useState('')
     const [ingredients, setIngredients] = useState([])
     const [instructions, setInstructions] = useState('')
@@ -16,7 +16,7 @@ const NewRecipe = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        const newRecipe = { name, author, servings, ingredients, instructions }
+        const newRecipe = { name, source, servings, ingredients, instructions }
    
         setRecipeAdded(true);
         setTimeout(() => {
@@ -45,8 +45,8 @@ const NewRecipe = () => {
                 <label> Author:</label>
                 <input type="text" 
                 required
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
+                value={source}
+                onChange={(e) => setSource(e.target.value)}
                 />
                 <label>Servings:</label>
                 <select value={servings} onChange={(e) => setServings(e.target.value)}>

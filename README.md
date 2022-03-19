@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Recipe Share 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my Phase 2 (React) project throught Flatiron School. This site allows you to view shared recipes and create your own. 
 
-## Available Scripts
+## Open on your local machine:
 
 In the project directory, you can run:
 

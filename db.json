@@ -356,9 +356,20 @@
       "name": "kn",
       "author": "jk",
       "servings": "4",
-      "ingredients": "k,jn, kjbh",
+      "ingredients": [
+        "kjn",
+        "kjbh"
+      ],
       "instructions": "mn",
       "id": "eQvLTgv"
+    },
+    {
+      "name": "mbmb",
+      "source": "nmbb",
+      "servings": "4",
+      "ingredients": ["mnbmn", "jgjhgbjhmb,"],
+      "instructions": "bnmbmn",
+      "id": "IjM-OCF"
     }
   ]
 }
