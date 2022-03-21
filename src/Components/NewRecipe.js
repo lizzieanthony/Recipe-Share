@@ -11,13 +11,14 @@ const NewRecipe = () => {
     const [instructions, setInstructions] = useState('')
     const [recipeAdded, setRecipeAdded] = useState(false)
     const history = useHistory();
+    const servingList = ['1', '2', '3']
     
     const handleSubmit = (e) => {
         e.preventDefault(); 
         const newRecipe = { name, source, servings, ingredients: ingredients.split(', '), instructions }
 
         setRecipeAdded(true);
-        
+        setTimeout(() => { 
             fetch('http://localhost:3001/recipes', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/JSON'},
@@ -27,7 +28,8 @@ const NewRecipe = () => {
                 setRecipeAdded('false')
                 history.push('/')
             }) 
-    }
+    }, 1000);
+}
 
     return ( 
         <div className="NewRecipe" >
@@ -39,14 +41,17 @@ const NewRecipe = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 />
+
                 <label> Author:</label>
                 <input type="text" 
                 required
                 value={source}
                 onChange={(e) => setSource(e.target.value)}
                 />
+
                 <label>Servings:</label>
                 <select value={servings} onChange={(e) => setServings(e.target.value)}>
+                    {<options value={servingList}>servings</options>}
                     <option value="1">1 serving </option>
                     <option value="2">2 servings</option>
                     <option value="3">3 servings</option>
@@ -56,9 +61,9 @@ const NewRecipe = () => {
                     <option value="7">7 servings</option>
                     <option value="8">8 servings</option>
                     <option value="9">9 servings</option>
-                    <option value="10">10 servings</option>
-                    {/* generate option iterate 10x and push let i=1 i++  */}
-                </select>  
+                    <option value="10">10 servings</option>   
+                </select>
+
                 <label>Ingredients:</label>
                 <p>separate using commas. ex: 1 tsp salt, 1 c flour</p>
                 <input 
@@ -66,12 +71,14 @@ const NewRecipe = () => {
                 value={ingredients}
                 onChange={(e) => setIngredients(e.target.value)}
                 />
+
                 <label>Instructions:</label>
                 <input  
                 required
                 value={instructions}
                 onChange={(e) => setInstructions(e.target.value)}
                 />
+                
                 { !recipeAdded && <button>Share Recipe</button>}    
                 { recipeAdded && <button style={{
                     color: "white",
@@ -84,3 +91,6 @@ const NewRecipe = () => {
 }
  
 export default NewRecipe;
+
+{/* generate option iterate 10x and push let i=1 i++  */}
+{/* <select multiple={true} value={['B', 'C']}></select> */}
