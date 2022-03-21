@@ -94,6 +94,9 @@ body {
 .recipe-info div {
   font-size: 20px;
   margin: 20px 0;
+  line-height: 1.5;
+  text-align: justify;
+  color: #565656;
 }
 
 .recipe-info ul {

@@ -11,13 +11,18 @@ const NewRecipe = () => {
     const [instructions, setInstructions] = useState('')
     const [recipeAdded, setRecipeAdded] = useState(false)
     const history = useHistory();
+    // const [submittedData, setSubmittedData] = useState([]);
 
-    // const ingredientsArray = (ingredients) => ingredients.split(',');
+    // const ingredientsArray = (ingredients) => ingredients.split(', ');
+    
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        const newRecipe = { name, source, servings, ingredients, instructions }
-   
+        const newRecipe = { name, source, servings, ingredients: ingredients.split(', '), instructions }
+        // const dataArray = [...submittedData, newRecipe];
+        // setSubmittedData(dataArray);
+
+
         setRecipeAdded(true);
         setTimeout(() => {
             fetch('http://localhost:3001/recipes', {
@@ -60,16 +65,17 @@ const NewRecipe = () => {
                     <option value="8">8 servings</option>
                     <option value="9">9 servings</option>
                     <option value="10">10 servings</option>
+                    {/* generate option iterate 10x and push let i=1 i++  */}
                 </select>  
                 <label>Ingredients:</label>
                 <p>separate using commas. ex: 1 tsp salt, 1 c flour</p>
-                <textarea
+                <input 
                 required
                 value={ingredients}
                 onChange={(e) => setIngredients(e.target.value)}
                 />
                 <label>Instructions:</label>
-                <textarea  
+                <input  
                 required
                 value={instructions}
                 onChange={(e) => setInstructions(e.target.value)}

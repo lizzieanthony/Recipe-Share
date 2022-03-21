@@ -1,6 +1,6 @@
 # Recipe Share 
 
-This is my Phase 2 (React) project throught Flatiron School. This site allows you to view shared recipes and create your own. 
+This is my Phase 2 (React) project throught Flatiron School. This site allows you to view shared recipes and share your own. 
 
 ## Open on your local machine:
 
