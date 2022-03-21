@@ -6,24 +6,15 @@ const useFetch = (url) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const abortCont = new AbortController();
 
         setTimeout(() => {
-             fetch(url, {signal: abortCont.signal })
-             .then(res => {
-                return res.json();
-             })
+             fetch(url)
+             .then(res => (res.json()))
              .then(data => {
                  setData(data)
                  setIsLoading(false)
-             })
-             .catch(err => { 
-                     setIsLoading(false)
-                 }
-             )
+             })  
         }, 1000);
-
-        return () => abortCont.abort();
     }, [url]);
 
     return { data, isLoading };

@@ -15,4 +15,3 @@ const Home = () => {
  
 export default Home;
 
-{/* <RecipeList  recipes={recipes.filter((recipe) => recipe.author === 'lizzie')} title ="Lizzies' Recipes"/> */}

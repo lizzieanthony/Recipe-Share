@@ -11,20 +11,13 @@ const NewRecipe = () => {
     const [instructions, setInstructions] = useState('')
     const [recipeAdded, setRecipeAdded] = useState(false)
     const history = useHistory();
-    // const [submittedData, setSubmittedData] = useState([]);
-
-    // const ingredientsArray = (ingredients) => ingredients.split(', ');
     
-
     const handleSubmit = (e) => {
         e.preventDefault(); 
         const newRecipe = { name, source, servings, ingredients: ingredients.split(', '), instructions }
-        // const dataArray = [...submittedData, newRecipe];
-        // setSubmittedData(dataArray);
-
 
         setRecipeAdded(true);
-        setTimeout(() => {
+        
             fetch('http://localhost:3001/recipes', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/JSON'},
@@ -33,8 +26,7 @@ const NewRecipe = () => {
                 console.log('new blog added')
                 setRecipeAdded('false')
                 history.push('/')
-            })
-        }, 1000); 
+            }) 
     }
 
     return ( 

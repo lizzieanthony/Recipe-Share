@@ -4,13 +4,14 @@ import useFetch from "./useFetch";
 const RecipeInfo = () => {
    const { id } = useParams();
    const { data: recipe, isLoading, } = useFetch('http://localhost:3001/recipes/' + id);
-   
+//    const {name, source, servings, ingredients, instructions} = recipe;
+
     return ( 
         <div className="recipe-info" >
             { isLoading && <div>Loading...</div> }
             { recipe && (
                 <article>
-                    <h2>{ recipe.name }</h2>
+                    <h2>{recipe.name }</h2>
                     <h4>Recipe by: {recipe.source }</h4>
                     <br></br>
                     <p>{ recipe.servings } servings</p>
@@ -25,5 +26,3 @@ const RecipeInfo = () => {
 }
  
 export default RecipeInfo;
-
-{/* <ul>{ recipe.ingredients.map((ingredient) => <ul key={recipe.id}>{ingredient}</ul> ) }</ul> */}
