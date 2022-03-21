@@ -2,10 +2,11 @@ import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const RecipeInfo = () => {
-   const { id } = useParams();
-   const { data: recipe, isLoading, } = useFetch('http://localhost:3001/recipes/' + id);
-//    const {name, source, servings, ingredients, instructions} = recipe;
-
+    const { id } = useParams();
+    const { data: recipe, isLoading, } = useFetch('http://localhost:3001/recipes/' + id);
+   
+    // const {name, source, servings, ingredients, instructions} = recipe;   
+   
     return ( 
         <div className="recipe-info" >
             { isLoading && <div>Loading...</div> }
