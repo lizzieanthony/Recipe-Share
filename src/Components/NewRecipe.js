@@ -50,7 +50,7 @@ const NewRecipe = () => {
                 />
 
                 <select value={servings} onChange={(e) => setServings(e.target.value)}>
-                    {<options value={servings}>servings</options>}
+                    {<option value={servings}>servings</option>}
                     <option value="1">1 serving </option>
                     <option value="2">2 servings</option>
                     <option value="3">3 servings</option>
