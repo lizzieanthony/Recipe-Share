@@ -49,12 +49,19 @@ const NewRecipe = () => {
                 onChange={(e) => setSource(e.target.value)}
                 />
 
-                <label>Servings:</label>
-                <input type="text"
-                required
-                value={servings}
-                onChange={(e) => setServings(e.target.value)}
-                />
+                <select value={servings} onChange={(e) => setServings(e.target.value)}>
+                    {<options value={servings}>servings</options>}
+                    <option value="1">1 serving </option>
+                    <option value="2">2 servings</option>
+                    <option value="3">3 servings</option>
+                    <option value="4">4 servings</option>
+                    <option value="5">5 servings</option>
+                    <option value="6">6 servings</option>
+                    <option value="7">7 servings</option>
+                    <option value="8">8 servings</option>
+                    <option value="9">9 servings</option>
+                    <option value="10">10 servings</option>   
+                </select> 
 
                 <label>Ingredients:</label>
                 <p>separate using commas. ex: 1 tsp salt, 1 c flour</p>
@@ -90,18 +97,11 @@ export default NewRecipe;
 
 // alternate option for servings 
 
- {/* <select value={servings} onChange={(e) => setServings(e.target.value)}>
-                    {<options value={servings}>servings</options>}
-                    <option value="1">1 serving </option>
-                    <option value="2">2 servings</option>
-                    <option value="3">3 servings</option>
-                    <option value="4">4 servings</option>
-                    <option value="5">5 servings</option>
-                    <option value="6">6 servings</option>
-                    <option value="7">7 servings</option>
-                    <option value="8">8 servings</option>
-                    <option value="9">9 servings</option>
-                    <option value="10">10 servings</option>   
-                </select> */}
+{/* <label>Servings:</label>
+<input type="text"
+required
+value={servings}
+onChange={(e) => setServings(e.target.value)}
+/> */}
 {/* generate option iterate 10x and push let i=1 i++  */}
 {/* <select multiple={true} value={['B', 'C']}></select> */}
