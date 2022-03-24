@@ -5,8 +5,6 @@ const RecipeInfo = () => {
     const { id } = useParams();
     const { data: recipe, isLoading, } = useFetch('http://localhost:3001/recipes/' + id);
    
-    // const {name, source, servings, ingredients, instructions} = recipe;   
-   
     return ( 
         <div className="recipe-info" >
             { isLoading && <div>Loading...</div> }
@@ -27,3 +25,5 @@ const RecipeInfo = () => {
 }
  
 export default RecipeInfo;
+
+
