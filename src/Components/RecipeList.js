@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const RecipeList = ({recipes, name }) => {
-    console.log(recipes)
+    // console.log(recipes)
 
     return ( 
       <div className="recipe-list"> 
