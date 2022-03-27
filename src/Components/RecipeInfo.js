@@ -25,5 +25,3 @@ const RecipeInfo = () => {
 }
  
 export default RecipeInfo;
-
-
