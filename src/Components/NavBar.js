@@ -8,11 +8,7 @@ const Navbar = () => {
        <h1><Link to="/">Recipe Share</Link></h1> 
         <div className="links">
             <Link to="/">Home</Link>  
-            <Link to="/NewRecipe" style={{
-              color: "white",
-              backgroundColor: '#cd5c5c',
-              borderRadius: '10px'
-            }}>New Recipe</Link>  
+            <Link className="new" to="/NewRecipe" >New Recipe</Link>  
         </div>
       </nav>
     );

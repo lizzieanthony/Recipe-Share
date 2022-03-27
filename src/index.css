@@ -29,6 +29,12 @@ body {
   margin-left: auto;
 }
 
+.navbar .new {
+  color: white;
+  background-color: #cd5c5c;
+  border-radius: 10px;
+}
+
 .navbar a {
   margin-left: 50px;
   text-decoration: none;
@@ -38,7 +44,6 @@ body {
 }
 
 .navbar a:hover {
-  color: #cd5c5c;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
 }
 
