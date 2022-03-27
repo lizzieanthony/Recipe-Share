@@ -79,11 +79,7 @@ const NewRecipe = () => {
                 />
                 
                 { !recipeAdded && <button>Share Recipe</button>}    
-                { recipeAdded && <button style={{
-                    color: "white",
-                    backgroundColor: '#bf6609',
-                    borderRadius: '10px'}}
-                >Recipe Shared!</button>  }
+                { recipeAdded && <button className="submitted" >Recipe Shared!</button>  }
             </form>
         </div>
     );
@@ -91,17 +87,3 @@ const NewRecipe = () => {
  
 export default NewRecipe;
 
-
-
-
-
-// alternate option for servings 
-
-{/* <label>Servings:</label>
-<input type="text"
-required
-value={servings}
-onChange={(e) => setServings(e.target.value)}
-/> */}
-{/* generate option iterate 10x and push let i=1 i++  */}
-{/* <select multiple={true} value={['B', 'C']}></select> */}

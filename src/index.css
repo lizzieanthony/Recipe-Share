@@ -146,3 +146,8 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+.NewRecipe .submitted {
+  color: white;
+  background-color: #bf6609;
+  border-radius: 10px;
+}
